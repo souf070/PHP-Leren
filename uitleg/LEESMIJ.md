@@ -2,6 +2,8 @@
 
 Kies hieronder één onderwerp. Je krijgt steeds een korte uitleg met een klein codevoorbeeld.
 
+**Snel herhalen? Open het [spiekbriefje](SPIEKBRIEFJE.md).**
+
 De oorspronkelijke toetsbestanden staan in **b toets**. Deze map uitleg bevat alleen leesmateriaal: er is geen extra Symfony-app gebouwd of geïnstalleerd.
 
 De voorbeelden zijn **losse leerstukjes voor een Symfony 7.4-project**. Een stukje dat “binnen de controller” hoort, plak je niet los in een PHP-bestand. Verschillende onderwerpen laten soms dezelfde route opnieuw zien: het zijn alternatieve voorbeelden, niet allemaal tegelijk toe te voegen acties.

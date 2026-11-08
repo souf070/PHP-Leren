@@ -1,0 +1,26 @@
+# Spiekbriefje — Symfony
+
+- Server starten = `symfony serve`
+- Server stoppen = `Ctrl+C`
+- Project maken = `symfony new symfony-basis --version="7.4.*" --webapp`
+- Projectmap openen = `cd symfony-basis`
+- Controller maken = `symfony console make:controller CarController`
+- Entity maken = `symfony console make:entity Car`
+- Formulier maken = `symfony console make:form FormType Car`
+- Database maken = `symfony console doctrine:database:create`
+- Migratie maken = `symfony console make:migration`
+- Migratie uitvoeren = `symfony console doctrine:migrations:migrate`
+- Routes bekijken = `symfony console debug:router`
+- Alle auto's ophalen = `$repository->findAll()`
+- Eén auto ophalen = `$repository->find($id)`
+- Nieuwe auto = `new Car()`
+- Toevoegen = `persist($car)` → `flush()`
+- Wijzigen = bestaande auto aanpassen → `flush()`
+- Verwijderen = `remove($car)` → `flush()` (POST + CSRF)
+- Formulier verwerken = `$form->handleRequest($request)`
+- Formulier controleren = `$form->isSubmitted() && $form->isValid()`
+- Pagina tonen = `$this->render('car/index.html.twig', ['cars' => $cars])`
+- Doorsturen = `$this->redirectToRoute('app_car')`
+- Waarde tonen in Twig = `{{ car.model }}`
+- Link maken in Twig = `{{ path('app_view_car', {id: car.id}) }}`
+- Afbeeldingspad in Twig = `{{ asset('images/' ~ car.image) }}`
