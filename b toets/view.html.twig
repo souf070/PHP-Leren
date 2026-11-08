@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Auto overzicht{% endblock %}
+
+{% block body %}
+<h1>Smartphone {{car.model}}</h1>
+
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">model</th>
+      <th scope="col">image</th>
+      <th scope="col">price</th>
+      <th scope="col">vendor</th>
+      <th scope="col">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{ car.id }}</th>
+      <td>{{ car.model }}</td>
+      <td>{{ car.image }}</td>
+      <td>{{ car.price }}</td>
+      <td>{{ car.vendor }}</td>
+      <td>{{ car.description }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<a href="{{path('app_car')}}"><button>back</button></a>
+{% endblock %}

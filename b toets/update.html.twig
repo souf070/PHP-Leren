@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Auto overzicht{% endblock %}
+
+{% block body %}
+
+  <h1>update car</h1>
+
+    {{ form(form) }}
+
+  <a href="{{path('app_car')}}"><button>back</button></a>
+{% endblock %}

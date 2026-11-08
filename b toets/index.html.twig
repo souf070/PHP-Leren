@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Auto overzicht{% endblock %}
+
+{% block body %}
+<h1>Auto's</h1>
+<a href="{{path('app_add_car')}}" class="btn btn-primary">add auto</a>
+    <div class="container">
+        <div class="row">
+            {% for car in cars %}
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card flex-grow-1">
+                    <img src="{{ asset('images/' ~ car.image) }}" height="200px" class="card-img-top object-fit-cover" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ car.vendor }} - {{ car.model }}</h5>
+                        <p class="card-text">&euro;{{ car.price|number_format(0, ',', '.') }}</p>
+
+                    </div>
+                    <a href="{{path('app_view_car', {'id' : car.id})}}" class="btn btn-info">Meer info</a>
+                    <a href="{{path('app_update_car', {'id' : car.id})}}" class="btn btn-warning">bijwerken</a>
+                    <a href="{{path('app_delete_car', {'id' : car.id})}}" class="btn btn-danger">verwijderen</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
