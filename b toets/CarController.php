@@ -75,20 +75,16 @@ final class CarController extends AbstractController
     #[Route('/car-delete/{id}', name: 'app_delete_car')]
     public function delete(EntityManagerInterface $entityManager, int $id): Response {
     $car = $entityManager->getRepository(Car::class)->find($id);
-    //We bereiden het wissen voor in de database
+    
     $entityManager->remove($car);
 
-    //We voeren de statements uit (het wordt nog gedelete)
+   
     $entityManager->flush();
 
-    //Uiteraard zetten we een flash-message
+
     $this->addFlash('success', 'car got deleted');
 
-    //We maken een redirect naar de route om het aangepaste boek te tonen
+    
     return $this->redirectToRoute('app_car');
     }
 }
-
-// Note:
-// Bootstrap no clue how to use it 
-// tryed to make a red button... broke everything....
