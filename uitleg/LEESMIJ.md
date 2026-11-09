@@ -2,6 +2,8 @@
 
 Kies hieronder één onderwerp. Je krijgt steeds een korte uitleg met een klein codevoorbeeld.
 
+**Code kopiëren? Open [CRUD: Create, Read, Update en Delete](../CRUD/LEESMIJ.md).**
+
 **Snel herhalen? Open het [spiekbriefje](SPIEKBRIEFJE.md).**
 
 De oorspronkelijke toetsbestanden staan in **b toets**. Deze map uitleg bevat alleen leesmateriaal: er is geen extra Symfony-app gebouwd of geïnstalleerd.
